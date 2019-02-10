@@ -18,11 +18,17 @@ const styles = {
     "&:last-child": {
       borderRadius: "0 0 5px 5px",
     },
+    "@media (max-width:420px)": {
+      fontSize: 12,
+    },
   },
   itemInner: {
     display: "flex",
-    maxWidth: "55%",
+    flex: "0 1 50%",
     alignItems: "center",
+    "@media (max-width:720px)": {
+      flex: "0 1 30%",
+    },
   },
   number: {
     minWidth: 30,
@@ -41,7 +47,7 @@ const styles = {
     fontWeight: "bold",
     color: "#fff",
     borderRadius: "50%",
-    boxShadow: "0 0 20px rgba(0,0,0,0.3)"
+    boxShadow: "0 0 20px rgba(0,0,0,0.3)",
   },
   authorInfo: {
     display: "flex",

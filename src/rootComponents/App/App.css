@@ -1,8 +1,9 @@
-* {
+*, ::after, ::before {
   box-sizing: border-box;
 }
 
 .app {
+  min-width: 375px;
   min-height: 100vh;
   background: linear-gradient(to bottom, rgb(30, 87, 153) 0%, rgb(18, 44, 63) 0%, rgb(32, 124, 202) 100%, rgb(40, 95, 137) 100%);
 }

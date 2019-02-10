@@ -29,33 +29,35 @@ class SortBy extends PureComponent {
     return (
       <div className={classes.sortBy}>
         <span className={classes.sortByTitle}>Сортировать по:</span>
-        <div
-          className={cn(classes.sortByDown, {[classes.active]: sortActive === "rating_desc"})}
-          onClick={this.sortByHandler}
-          data-sort="rating_desc"
-        >
-          Рейтингу
-        </div>
-        <div
-          className={cn(classes.sortByUp, {[classes.active]: sortActive === "rating_asc"})}
-          onClick={this.sortByHandler}
-          data-sort="rating_asc"
-        >
-          Рейтингу
-        </div>
-        <div
-          className={cn(classes.sortByDown, {[classes.active]: sortActive === "name_desc"})}
-          onClick={this.sortByHandler}
-          data-sort="name_desc"
-        >
-          Имени
-        </div>
-        <div
-          className={cn(classes.sortByUp, {[classes.active]: sortActive === "name_asc"})}
-          onClick={this.sortByHandler}
-          data-sort="name_asc"
-        >
-          Имени
+        <div className={classes.sortByInner}>
+          <div
+            className={cn(classes.sortByDown, {[classes.active]: sortActive === "rating_desc"})}
+            onClick={this.sortByHandler}
+            data-sort="rating_desc"
+          >
+            Рейтингу
+          </div>
+          <div
+            className={cn(classes.sortByUp, {[classes.active]: sortActive === "rating_asc"})}
+            onClick={this.sortByHandler}
+            data-sort="rating_asc"
+          >
+            Рейтингу
+          </div>
+          <div
+            className={cn(classes.sortByDown, {[classes.active]: sortActive === "name_desc"})}
+            onClick={this.sortByHandler}
+            data-sort="name_desc"
+          >
+            Имени
+          </div>
+          <div
+            className={cn(classes.sortByUp, {[classes.active]: sortActive === "name_asc"})}
+            onClick={this.sortByHandler}
+            data-sort="name_asc"
+          >
+            Имени
+          </div>
         </div>
       </div>
     );
