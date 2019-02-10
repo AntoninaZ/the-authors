@@ -1,27 +1,28 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import styles from './List.jss';
-
 import ListItem from '../ListItem';
 
-class List extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+class List extends PureComponent {
   render() {
     const {classes, data} = this.props;
+
     return (
-      <React.Fragment>
-        {data.map((item, index) => (
+      <div className={classes.list}>
+        {data.map((item) => (
           <ListItem
-            key={`author-${index}`}
+            key={item.rating}
             dataItem={item}/>
         ))}
-      </React.Fragment>
+      </div>
     );
   }
 }
 
+List.propTypes = {
+  classes: PropTypes.any.isRequired,
+  data: PropTypes.array.isRequired
+};
 
 export default injectSheet(styles)(List);

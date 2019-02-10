@@ -15,14 +15,18 @@ const styles = {
     "&:nth-child(2n)": {
       backgroundColor: "#f4f6f9",
     },
+    "&:last-child": {
+      borderRadius: "0 0 5px 5px",
+    },
   },
   itemInner: {
     display: "flex",
-    maxWidth: "50%",
+    maxWidth: "55%",
     alignItems: "center",
   },
   number: {
-    marginRight: "30px",
+    minWidth: 30,
+    marginRight: 10,
     color: "#b2b2b2",
   },
   icon: {
@@ -30,10 +34,10 @@ const styles = {
     flex: "0 0 auto",
     justifyContent: "center",
     alignItems: "center",
-    width: "40px",
-    height: "40px",
-    marginRight: "20px",
-    fontSize: "20px",
+    width: 40,
+    height: 40,
+    marginRight: 20,
+    fontSize: 20,
     fontWeight: "bold",
     color: "#fff",
     borderRadius: "50%",
@@ -44,7 +48,7 @@ const styles = {
     flexDirection: "column",
   },
   authorName: {
-    paddingBottom: "10px",
+    paddingBottom: 5,
     fontWeight: "bold",
     color: "#1d3648",
   },
@@ -52,9 +56,10 @@ const styles = {
     color: "#b2b2b2",
   },
   medal: {
-    width: 30,
-    height: 60,
+    width: 20,
+    height: 40,
     backgroundRepeat: "no-repeat",
+    backgroundSize: "contain",
   },
   goldMedal: {
     backgroundImage: `url(${goldMedal})`,
@@ -68,7 +73,7 @@ const styles = {
   pageViews: {
     fontWeight: "bold",
     color: "#1d3648",
-  }
+  },
 };
 
 export default styles;

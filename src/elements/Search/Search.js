@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from "prop-types";
 import injectSheet from 'react-jss';
-import PropTypes from 'prop-types';
 import styles from './Search.jss';
 
 
-class Search extends React.Component {
+class Search extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      value: ''
+    };
     this.handlerSearch = this.handlerSearch.bind(this);
   }
 
+  /**
+   * Handler search
+   * @param {event} e
+   */
   handlerSearch(e) {
     const {cbSearch} = this.props;
 
-    this.setState({value: e.target.value});
-    cbSearch(e.target.value);
+    this.setState({value: e.currentTarget.value});
+    cbSearch(e.currentTarget.value);
   }
 
   render() {
@@ -32,5 +38,10 @@ class Search extends React.Component {
     );
   }
 }
+
+Search.propTypes = {
+  classes: PropTypes.any.isRequired,
+  cbSearch: PropTypes.func.isRequired
+};
 
 export default injectSheet(styles)(Search);

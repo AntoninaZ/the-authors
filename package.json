@@ -2,6 +2,7 @@
   "name": "the-authors",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://antoninaz.github.io/the-authors/",
   "repository": {
   "type": "git",
   "url": "git+https://github.com/zhukyuri/react-ui-set.git"
@@ -10,7 +11,8 @@
     "classnames": "^2.2.6",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-scripts": "2.1.3"
+    "react-scripts": "2.1.3",
+    "hsluv": "0.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,7 +32,6 @@
   ],
   "devDependencies": {
     "gh-pages": "^2.0.1",
-    "hsluv": "0.0.3",
     "prop-types": "^15.6.2",
     "react-jss": "^8.6.1"
   }
